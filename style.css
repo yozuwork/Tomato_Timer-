@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;`
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+  }
+  .container {
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    position: relative;
+  }
+  .background-image {
+    position: absolute;
+    width: calc(100% - 40px);  /* 減去進度條的寬度 */
+    height: calc(100% - 40px);
+    top: 20px;  /* 進度條寬度的一半 */
+    left: 20px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+  .timer {
+    font-size: 4em;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* 添加文字陰影提高可讀性 */
+  }
+  .progress-ring {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+  .progress-ring__circle {
+    fill: transparent;
+    stroke-width: 20;
+    stroke-linecap: round;
+  }
+  .controls {
+    margin-top: 20px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin: 0 5px;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  #upload {
+    margin-top: 20px;
+  }
